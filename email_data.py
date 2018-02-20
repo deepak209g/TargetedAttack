@@ -5,8 +5,11 @@ from flanker import mime
 from flanker.addresslib import address
 import email.utils
 import time
+import win32com.client, mailbox, email.utils
+import pythoncom
 
 
+pythoncom.CoInitialize()
 def json_serial(obj):
     if isinstance(obj, datetime.datetime):
         serial = obj.isoformat()
@@ -60,12 +63,42 @@ def get_metadata(file):
     return toret
 
 
+def fetch_outlook_data():
+    outlook_client = win32com.client.Dispatch("Outlook.Application").GetNameSpace('MAPI')
+    inbox = outlook_client.GetDefaultFolder(6)
+    messages = inbox.Items
+    toret = []
+
+    for mail in messages:
+        if mail.Unread:
+            data = {}
+            # mail is unread
+            data['Subject'] = mail.Subject
+            sender = ''
+            if mail.Class == 43:
+                if mail.SenderEmailType == "EX":
+                    sender = mail.Sender.GetExchangeUser().PrimarySmtpAddress
+                else:
+                    sender = mail.SenderEmailAddress
+            data['Sender'] = sender
+            data['Body'] = mail.Body
+            data['Date'] = mail.CreationTime
+            toret.append(data)
+
+
+    return toret
+
+
 if __name__ == '__main__':
     root = fu.absdir(__file__)
     emails = os.path.join(root, 'Data', 'email')
     _, files = fu.listdir(emails)
 
-    for file in files:
-        file = os.path.join(emails, file)
-        print file
-        print get_metadata(file)
+    # for file in files:
+    #     file = os.path.join(emails, file)
+    #     print file
+    #     print get_metadata(file)
+
+    fetch_outlook_data()
+
+
