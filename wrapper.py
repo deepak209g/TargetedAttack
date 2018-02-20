@@ -6,14 +6,15 @@ import client
 import Tkinter
 import tkMessageBox
 import threading
+import ctypes
 
 susp_emails = {}
 
 PEER_THRESH = 1
 
 def showwarning():
-    tkMessageBox()
-    tkMessageBox.showwarning("Attention", "Your organization is possibly under a targeted attack")
+    MessageBox = ctypes.windll.user32.MessageBoxW
+    MessageBox(None, u'Malicious', u'Warning', 0)
 
 
 def main():
