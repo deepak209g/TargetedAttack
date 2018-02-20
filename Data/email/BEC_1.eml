@@ -1,0 +1,126 @@
+From /ase/bizdata/maildir_aset/asettest/output_directories/except_spools/new/1485873443.3356_0.aset-vmailhost-01.ussfqa.qalabs.symantec.com
+Return-Path: <bizint@brightmail.com>
+X-Original-To: /ase/bizdata/image_spooldirs/automation_eml_queue/20170131.0636-mlsubmit-submissions.qfdb.spamlab-markup04.tuc.900001.eml.prod_F2SMG@except.brightmail.com
+Delivered-To: asettest@asettest.brightmail.com
+Received: from aset-vmarkup-01.ussfqa.qalabs.symantec.com (aset-vmarkup-01.ussfqa.qalabs.symantec.com [10.32.216.216])
+	by asettest.brightmail.com (Postfix) with ESMTP id 0B5E315EFD4
+	for </ase/bizdata/image_spooldirs/automation_eml_queue/20170131.0636-mlsubmit-submissions.qfdb.spamlab-markup04.tuc.900001.eml.prod_F2SMG@except.brightmail.com>; Tue, 31 Jan 2017 06:37:23 -0800 (PST)
+Received: from aset-prod-16.ussfqa.qalabs.symantec.com (aset-prod-16.ussfqa.qalabs.symantec.com [10.32.216.105])
+	by aset-vmarkup-01.ussfqa.qalabs.symantec.com (Symantec Messaging Gateway) with SMTP id 0E.0A.03407.221A0985; Tue, 31 Jan 2017 06:37:22 -0800 (PST)
+X-Mailbox-Line: From "Baker, Bob" <bakerb@curtisinst.com>:junk_parsed_msg
+X-BMI-ASM-Submitter: "Baker, Bob" <bakerb@curtisinst.com>
+X-BMI-ASM-Receiver: "spamsample@messagelabs.com" <spamsample@messagelabs.com>
+Received: from SNY211.na.curtisinst.local (10.20.10.231) by
+ SNY201.na.curtisinst.local (10.20.10.221) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.544.27 via Mailbox Transport; Mon, 30 Jan 2017 13:55:57 -0500
+Received: from SNY211.na.curtisinst.local (10.20.10.231) by
+ SNY211.na.curtisinst.local (10.20.10.231) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.544.27; Mon, 30 Jan 2017 13:55:57 -0500
+Received: from smtpmail01.curtisinst.com (10.20.15.12) by
+ SNY211.na.curtisinst.local (10.20.10.231) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id
+ 15.1.544.27 via Frontend Transport; Mon, 30 Jan 2017 13:55:57 -0500
+Received: from mwsmtp03oc.mail2world.com (mwsmtp03oc.mail2world.com [74.202.142.130])
+	by smtpmail01.curtisinst.com (smtpmail01.curtisinst.com) with SMTP id 43.E7.28316.D3C8F885; Mon, 30 Jan 2017 13:55:57 -0500 (EST)
+Received: from mail pickup service by mwsmtp03oc.mail2world.com with Microsoft SMTPSVC;
+	 Mon, 30 Jan 2017 10:56:54 -0800
+Received: from 10.1.106.55 unverified ([10.1.106.55]) by mwsmtp03oc.mail2world.com with Mail2World SMTP Server; 
+	Mon, 30 Jan 2017 10:56:52 -0800
+From: Stuart Marwell <marwells@curtisinst.co>
+To: "Beardslee, Paula" <BeardsleeP@curtisinst.com>
+Subject: Request
+Thread-Topic: Request
+Thread-Index: AQHSeyp9Wdr37paC5kKms7I4PerkKw==
+Date: Mon, 30 Jan 2017 18:56:52 +0000
+Message-ID: <D52N5QPXE0U4.DRDAHZZI8ZGE@mwmedia01oc>
+Content-Language: en-US
+X-MS-Exchange-Organization-AuthSource: SNY211.na.curtisinst.local
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-Network-Message-Id: 571d230d-03be-4a00-f08f-08d44941a04c
+X-MS-TNEF-Correlator:
+x-originalarrivaltime: 30 Jan 2017 18:56:54.0135 (UTC)
+ FILETIME=[9F767870:01D27B2A]
+X-Brightmail-Tracker: H4sIAAAAAAAAA11Uf0wbZRjmuzvgqP3YcV3pt1oWVl2CS9rBMI4lyoozcxhdNGpStyV4wNFW
+	+mt3V36ZmIlAAuiGCwZXYMMwYdFsEjeTCbjE+scy5mTiFNz4pwoG6kTd2JYwGH7Xu7Kr/719
+	nud9n/d97ktpkv1FZ6b5OokX/JzXmqajdLlTHpv1kw5n/mKULPr3QrkD7Dn902rqy2Cf7ulK
+	3uup4YWtxW/q3CtNGcGedXUftT9zCFzMbAMZNGKeRO9fW0xvAzqaZVoINDLUSShEKWqZasQE
+	jesdaLDHqcAvoejZcaDoOwg0/+l1QvmxBNDi/UmVOUKg8cnf1LG/AjTafJeU+1mmAUWi36Up
+	xFGA7s4uxIk0xoZGBofj3uuZbWj52zOUXBsYBr13/g6p4Eb018CSqrGjnzun4zXFbEY9F2fi
+	esgUogvRH+M4yZjQ9ZkT6j0lqPtcH6XUDDo5Ok4qt72Kvj+2TYGNaP73B6lK/Tq6ffUsJe+J
+	mDYd6gvPEYnA7kSW05T5+9GHrd1A8c1Cl47NUB3AEtZYhzWysEYWxtYk8wT6YnirItmEOtuj
+	6Uqdh5p7etUau02PAa2mD9CfgS2cyEu2Gh8nVIeCtvwCe0gUqw5y9oOclysX7WK9j/NLfIW9
+	IuD7EihPZOo8GLu5MwIYGlj1MK/liJNN5WqwMgKqacJqhLcNHU42szxQWe/mRHeZEPLyonU9
+	7BUwDNfg8pC32mqGhIRRwxrq52tFLy/hN2ndCFd7P3CypjVODIlBT4UnEBLLQoI3AhBN4rGD
+	7fLYSq6+gRcCilkEPEpTVhP881bxayzj4iS+mueDvJBga2naimBBDW7MEngXX1fl8UoJGvex
+	IcwwWia+bA48s4qPzdYSmn03wczjeF+zlv7/ygSdEQEuWo/3/ls+HIpBzid6XKq1AU7LIekT
+	aNx2A6RkKZsANZY5sEq2zE5QyXZjoBnQx0/8M0+wlD/g580muKNVvkyWu0P+tZPN2XDhAJ6z
+	TkPI1mYLvHYK40YN/tDdnAv/kLs2aNjkBeT/lBfGDjdOgByzAYKUlBRWjz+DzyOp96p8DFTg
+	t2SAc/Kdeo9fepgIC1+RP8YjKhgPBMFdMpalYpo8LDAo52FUmeRtYjh4Agf/fOywHLzESdrg
+	d8mN+gSqBu+QQTYBJgW/UwlepZKdzIfAfjL/flFaQ9dosTGvYdgx9NTu5UvvHAi6pvtPNTkC
+	0uPvBofeuvH2vtCtzUfPfRXrune56VnvQunXJY4HfRsHlraPvti4Mlu49+OB9B/ob0b6r4S3
+	S100uXLj5udFp+/tfqO59go1cbXVX7YwYSFL++cKuwcu7yFnTZOWEttzztzHvDErJbq5gi2k
+	IHL/AaK3iMTpBQAA
+x-brightmail-tracker: H4sIAAAAAAAAA1VSbUxTVxjmPbfQS9frbgvGVyZZvMvcXAJDWYLugzmCzkC2LNmWMP/gnVzb
+	zva23nshwJ9hC4sWAd1AHWIxxjnEZY3Mufodix8DIgPFABtWMRApcypzMLsx2L10OPxz8pzz
+	PM953vPk0JTZrU+ihWJFkETezsUZdDnt1e6UN7bX5KX1f7FkRcXUGFkFa2tbT5L3YJ3h9QLB
+	bisSpJcz1xus3ScMrg59cWBPVWwZ7NJ7gaaRfQUP3kjxgoE2s/2ApysmKC/Eq5tSDA62xmkY
+	2UT0jg3FahhYDh/9WgNRzfP4/W63Pmr+HHBi+N6MmWFN2PblkE7DcWwqdl6/PHNRIpuMD44c
+	mDHrVPNXzYNEwwksi57A+H/edPzshwEqGrwUrw0f02uYYnNwMjytiw79Po4E7DuArZ+TVj9H
+	FcUv4KTvKhXFi7G2clBfr7opdgkequCix+rr7089IdkP+mZYKDsUl4O32dOWpW4olBSbbBNl
+	JXWD09ECauWGxKeNARgffzUILA2ckdnxbHWeOZYvkkscQVhIE24+Uz2mHs372FlQYuVla75U
+	aBfkICBNcYnMI09Nnpkp4EtKBck5Sz1D67gFzMXWdXlm1sIrwiZBcAnSLEtofRAW0TSHTNCr
+	uk2SYBGKN9rsylxNvJZgVBO2VWoJsot3yDZLlG+HdLr9964woX2ND8LErBOdopC0gDFoUlaT
+	WgvFx7fN/qyrkJyUwEBMTIzZqI7jsClP8qPQC2oFCUy2NpXRJiqPA5efURm2CfD2rRMm7K//
+	ejH6AuOZOPzQn40jLeffxengbx9gaGrvJgw1HBPx4eGdzYAXfv7OD3iu8c9LgLX3Ih2ARycu
+	9wL6p9uHAUf+3ncX8O6Rk+o6eGrkH8C9kUNbCB5t9HsIDuzr3kYwFIpsJ3juyqU6gk3lkw0E
+	97T4DxD09fUcJPhj15UWgl1nTx9XV9/OPoI9bW0hgn37y8MEG25tvU/wj6qLHmpU7ZKoXb49
+	Wq11qfD/Py2pDPJ3Ze1u+lR3/alf0qEh9/jK3PjylLeaSnMrpz+yfHvBndYqVt3p7cjoFC1b
+	ftr6V8ZzkWSx/+adgeKVq+oCaz7MevO1HOPmswPZJt83cXjNNW917uGisCWVOF80rTXV3RzK
+	yIKlqy1cJCT3rDm/qIC809vtCVaUuV3Uis58KfP2J5xOtvLLXqIkmf8X2mnxthUEAAA=
+X-AuditID: 0a20d8d8-b75ff70000000d4f-52-5890a12238f7
+Content-Type: multipart/alternative;
+	boundary="_000_D52N5QPXE0U4DRDAHZZI8ZGEmwmedia01oc_"
+MIME-Version: 1.0
+
+--_000_D52N5QPXE0U4DRDAHZZI8ZGEmwmedia01oc_
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+V2UgaGF2ZSBkZWNpZGVkIHRvIHJlc3RydWN0dXJlIHRoZSBzYWxhcmllcyBv
+ZiBvdXIgZW1wbG95ZWVzLiBJIHdhbnQgY29waWVzIG9mIGFsbCBvdXIgZW1w
+bG95ZWVzIFctMuKAmXMgZm9yIHRoZSB5ZWFyIDIwMTYgaW4gUERGLiBLaW5k
+bHkgcHJlcGFyZSB0aGUgbGlzdHMgYW5kIGVtYWlsIHRoZW0gdG8gbWUgYXNh
+cC4KClN0dWFydAoKX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpUaGlzIGVt
+YWlsIGhhcyBiZWVuIHNjYW5uZWQgYnkgdGhlIFN5bWFudGVjIEVtYWlsIFNl
+Y3VyaXR5LmNsb3VkIHNlcnZpY2UuCkZvciBtb3JlIGluZm9ybWF0aW9uIHBs
+ZWFzZSB2aXNpdCBodHRwOi8vd3d3LnN5bWFudGVjY2xvdWQuY29tCl9fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX18K
+
+--_000_D52N5QPXE0U4DRDAHZZI8ZGEmwmedia01oc_
+Content-Type: text/html; charset="utf-8"
+Content-ID: <D52N5QPXE0U4.5XPVQLHS5PEJ3@mwmedia01oc>
+Content-Transfer-Encoding: base64
+
+PGh0bWw+CjxoZWFkPgo8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LVR5cGUi
+IGNvbnRlbnQ9InRleHQvaHRtbDsgY2hhcnNldD11dGYtOCI+CjwvaGVhZD4K
+PGJvZHk+CjxkaXYgY2xhc3M9InJ0ZURpdiI+PC9kaXY+CjxkaXY+V2UgaGF2
+ZSBkZWNpZGVkIHRvIHJlc3RydWN0dXJlIHRoZSBzYWxhcmllcyBvZiBvdXIg
+ZW1wbG95ZWVzLiBJIHdhbnQgY29waWVzIG9mIGFsbCBvdXIgZW1wbG95ZWVz
+IFctMuKAmXMgZm9yIHRoZSB5ZWFyIDIwMTYgaW4gUERGLiBLaW5kbHkgcHJl
+cGFyZSB0aGUgbGlzdHMgYW5kIGVtYWlsIHRoZW0gdG8gbWUgYXNhcC48L2Rp
+dj4KPGRpdj48YnI+CjwvZGl2Pgo8ZGl2PlN0dWFydDwvZGl2Pgo8YnIgY2xl
+YXI9ImJvdGgiPgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fPEJSPgpUaGlz
+IGVtYWlsIGhhcyBiZWVuIHNjYW5uZWQgYnkgdGhlIFN5bWFudGVjIEVtYWls
+IFNlY3VyaXR5LmNsb3VkIHNlcnZpY2UuPEJSPgpGb3IgbW9yZSBpbmZvcm1h
+dGlvbiBwbGVhc2UgdmlzaXQgaHR0cDovL3d3dy5zeW1hbnRlY2Nsb3VkLmNv
+bTxCUj4KX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXzxCUj4KPC9ib2R5Pgo8
+L2h0bWw+Cgo=
+
+--_000_D52N5QPXE0U4DRDAHZZI8ZGEmwmedia01oc_--
+

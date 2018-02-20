@@ -1,0 +1,89 @@
+From /ase/bizdata/maildir_aset/asettest/output_directories/except_spools/new/1517997118.7911_0.aset-vmailhost-01.ussfqa.qalabs.symantec.com
+Return-Path: <bizint@brightmail.com>
+X-Original-To: /ase/bizdata/image_spooldirs/automation_eml_queue/20180207.0150-mlsubmit-submissions.qfdb.spamlab-markup04.tuc.900001.eml.prod_F2SMG@except.brightmail.com
+Delivered-To: asettest@asettest.brightmail.com
+Received: from aset-vmarkup-01.ussfqa.qalabs.symantec.com (aset-vmarkup-01.ussfqa.qalabs.symantec.com [10.32.216.216])
+	by asettest.brightmail.com (Postfix) with ESMTP id 32C2315EF9B
+	for </ase/bizdata/image_spooldirs/automation_eml_queue/20180207.0150-mlsubmit-submissions.qfdb.spamlab-markup04.tuc.900001.eml.prod_F2SMG@except.brightmail.com>; Wed,  7 Feb 2018 01:51:58 -0800 (PST)
+X-AuditID: 0a20d8d8-03dff70000007f5c-84-5a7acc3df9f1
+Received: from aset-prod-12.ussfqa.qalabs.symantec.com (aset-prod-12.ussfqa.qalabs.symantec.com [10.32.216.234])
+	by aset-vmarkup-01.ussfqa.qalabs.symantec.com (Symantec Messaging Gateway) with SMTP id EA.CD.32604.D3CCA7A5; Wed,  7 Feb 2018 01:51:58 -0800 (PST)
+X-Mailbox-Line: From mailadm@mail.eds.com:junk_parsed_msg
+X-BMI-ASM-Submitter: mailadm@mail.eds.com
+X-BMI-ASM-Receiver: spamsample@messagelabs.com
+Received: from UKNWSECSM019.R0018.COLLABORATION.ECS.HP.COM (15.135.173.212) by
+ UKNCSECSM015.R0018.COLLABORATION.ECS.HP.COM (15.135.135.215) with Microsoft
+ SMTP Server (TLS) id 15.0.1293.2 via Mailbox Transport; Wed, 7 Feb 2018
+ 09:31:54 +0000
+Received: from USAASECSM025.R0018.COLLABORATION.ECS.HP.COM (15.163.124.140) by
+ UKNWSECSM019.R0018.COLLABORATION.ECS.HP.COM (15.135.173.212) with Microsoft
+ SMTP Server (TLS) id 15.0.1293.2; Wed, 7 Feb 2018 09:31:53 +0000
+Received: from suwmlir1.mail.eds.com (15.163.124.8) by
+ USAASECSM025.R0018.COLLABORATION.ECS.HP.COM (15.163.124.140) with Microsoft
+ SMTP Server (TLS) id 15.0.1293.2 via Frontend Transport; Wed, 7 Feb 2018
+ 04:31:53 -0500
+Received: from suwmlir1.mail.eds.com (localhost [127.0.0.1])
+	by suwmlir1.mail.eds.com (8.14.9/8.13.8) with ESMTP id w179VgMF009267
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <Victoria.Kohler@abbvie.com>; Wed, 7 Feb 2018 09:31:42 GMT
+Received: from alpmler1.mail.eds.com ([15.163.92.118])
+	by suwmlir1.mail.eds.com (8.14.9/8.13.8) with ESMTP id w179VgOM009254
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <Victoria.Kohler@abbvie.com>; Wed, 7 Feb 2018 09:31:42 GMT
+Received: from alpmler1.mail.eds.com (localhost [127.0.0.1])
+	by alpmler1.mail.eds.com (8.14.9/8.13.8) with ESMTP id w179VD2q002073
+	for <Victoria.Kohler@abbvie.com>; Wed, 7 Feb 2018 04:31:13 -0500
+Received: from mail6.bemta8.messagelabs.com (mail6.bemta8.messagelabs.com [216.82.243.55])
+	by alpmler1.mail.eds.com (8.14.9/8.13.8) with ESMTP id w179V1YH065083
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <Victoria.Kohler@abbvie.com>; Wed, 7 Feb 2018 04:31:12 -0500
+Received: from [216.82.241.243] (using TLSv1.2 with cipher DHE-RSA-AES256-GCM-SHA384 (256 bits))
+	by server-6.bemta-8.messagelabs.com id 69/DE-04162-067CA7A5; Wed, 07 Feb 2018 09:31:12 +0000
+Received: (qmail 20701 invoked from network); 7 Feb 2018 09:31:12 -0000
+Received: from mail-it0-f67.google.com (HELO mail-it0-f67.google.com) (209.85.214.67)
+  by server-13.tower-192.messagelabs.com with AES128-GCM-SHA256 encrypted SMTP; 7 Feb 2018 09:31:12 -0000
+Received: by mail-it0-f67.google.com with SMTP id 196so1453855iti.5
+        for <Victoria.Kohler@abbvie.com>; Wed, 07 Feb 2018 01:31:12 -0800 (PST)
+Received: from [192.168.1.4] ([103.83.205.10])
+        by smtp.gmail.com with ESMTPSA id m99sm1562913ioo.10.2018.02.07.01.31.10
+        for <Victoria.Kohler@abbvie.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 07 Feb 2018 01:31:11 -0800 (PST)
+From: Imteaj khondokar robin <aainagaur11@gmail.com>
+To: "Kohler, Victoria" <Victoria.Kohler@abbvie.com>
+Subject: 
+Thread-Index: AQHTn/Z9RUA3+3by+0i0LcU2hxAR0w==
+Date: Wed, 7 Feb 2018 09:29:46 +0000
+Message-ID: <25dbbde8-2910-43d9-93f6-58722c282747@gmail.com>
+Content-Language: de-DE
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: USAASECSM025.R0018.COLLABORATION.ECS.HP.COM
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <B49E28F383A2D54F9A24949EFDE3AC3E@R0018.COLLABORATION.ECS.HP.COM>
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+X-Brightmail-Tracker: H4sIAAAAAAAAA11UbUxTVxjm3H5wQc643AocO5jQbIkYWjFTUEeY+mNbsmxxukXTP3qBKzS0
+	pfa2COzHiFMWS7LwabCMRRgayyBIxxInMLT7AkZwU5glMUgDbqx2mSDi3BbZOb23cNmfN+95
+	nve8H897cmgF27lBS/PlDt5u5cw6dawyNs0f1OeNVRqz/BPUrs8fjSv3gje6b6+oDgBjbG4h
+	bzaV8fZtecdii6eaXSqburzpXkhVBZQuEEMjZge6fWMSuEAszTLVFHK19VMisRt52uuxT2M/
+	A52tfU2EDehm4IJajH8C0Ge/hCjxcA+glmWPikSxzAxAw137RaKOQk2BOyrxUEOhcz0/K8XD
+	DwDdaPtDIR56KdS69EzKPATQzN1HCjHZ6+jKpfvRInEdIP/576WoRoDOtndJTAeFZhcmw/XV
+	eKozj3+KJv5G5mVUPzAPiK9hYpC35qaEG1B7yzdhFZTMi2hq3BceHDK56NTlsXC8gklG3l+f
+	qMTJM1GorkUS5yAKrjQA0U/AeQYUop+Enl0LqIloCixaz7VtYpq30FLvx9Gin44aawLRYqkE
+	NHJ+TlkL0tyyau61227Zbbfstlt2+wJQdYKtnMA79GUWzl7itOmzthucgnD8BGc4wZm5fMEg
+	VFg4q4MvMBSUWrxAfDP+q2A09KoPMDTQxcGsKxVGVsWV4UgfKKEpXSKcbas0ss/llxZWFHNC
+	8VG708wLuo3wpSEMw1U432ku0Wnh+8MY1ayiVv6kYOYd+JHqXoBHPsFc8ionOAWbqcBU6hSO
+	Ou1mH0C0Aqd96iFpC7mKSt5eKhbzgedppS4ZPljMe5dlijgHX8LzNt4eYT/EQjH18wujQKu0
+	llp5HYJ1ozhLgp0v4suPm8yOSCxO4r2OGUbOhDtPhcsH8eRJckLWfDpkDmFaK6f/3z9Fx/hA
+	ER2Hhzj2IxlCsHEWwVQkldbAU0SbuAgaLrsJXhzBIBsBZSVT4eZWTCVFqPXlRkE/oL2L09UK
+	etk9g+3DQWJdXxNb7Zkj+LnfsG3+93dsP/0niK1//gG2fZdC1Qo2rJQ2GTYRpRhSpNhpXRVK
+	mwT7yMDxMoI0rE2BHzw9aWQTZfhaz9o0WEXYTTJ2fdvkn4r/qHviFkjVaiCIiopi4/AmLSaH
+	pJLEB0EBfo4amEWEjDNZHWs6sjBAWt4ggWEZEewhMiZImEzFFLiDqJgoMeu7CeJ1UXhdfrJ6
+	KDg4h3xdGa3hdUmotC5da3hdErhuXVvEdUnU+kraKvBlvf7i3/1/qYYPL2TvutOVEj8+33F6
+	cKJjZF/wvd7o+My+Bptvd3/3F/vHpnv6eg5vHsg+s+fQ4JHy6YaCq7W5MepXmi/vmUvKyXk7
+	2fLVn3czQ6cb9Z4DUQ/T6xYfu5i8yc59szlvbinT3Hqndilz6rtv1cadedns0M77qrrclZG9
+	GZ06pVDMbd+qsAvcf2pn+lM9BgAA
+
+DQo=

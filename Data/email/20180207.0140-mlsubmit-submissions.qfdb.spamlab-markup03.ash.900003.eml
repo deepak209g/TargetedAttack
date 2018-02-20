@@ -1,0 +1,92 @@
+From /ase/bizdata/maildir_aset/asettest/output_directories/except_spools/new/1517996490.9033_2.aset-vmailhost-03.ussfqa.qalabs.symantec.com
+Return-Path: <bizint@brightmail.com>
+X-Original-To: /ase/bizdata/image_spooldirs/automation_eml_queue/20180207.0140-mlsubmit-submissions.qfdb.spamlab-markup03.ash.900003.eml.prod_F2SMG@except.brightmail.com
+Delivered-To: asettest@asettest1.brightmail.com
+Received: from aset-vsmg-02 (aset-vsmg-02.ussfqa.qalabs.symantec.com [10.32.216.102])
+	by asettest1.brightmail.com (Postfix) with ESMTP id 9BD4C15EF82
+	for </ase/bizdata/image_spooldirs/automation_eml_queue/20180207.0140-mlsubmit-submissions.qfdb.spamlab-markup03.ash.900003.eml.prod_F2SMG@except.brightmail.com>; Wed,  7 Feb 2018 01:41:30 -0800 (PST)
+X-AuditID: 0a20d866-b3dff70000003041-59-5a7ac9c9de9a
+Received: from aset-prod-16.ussfqa.qalabs.symantec.com (aset-prod-16.ussfqa.qalabs.symantec.com [10.32.216.105])
+	by aset-vsmg-02 (Symantec Messaging Gateway) with SMTP id 0E.62.12353.9C9CA7A5; Wed,  7 Feb 2018 01:41:30 -0800 (PST)
+X-Mailbox-Line: From mailadm@mail.eds.com:junk_parsed_msg
+X-BMI-ASM-Submitter: mailadm@mail.eds.com
+X-BMI-ASM-Receiver: spamsample@messagelabs.com
+Received: from UKNWSECSM019.R0018.COLLABORATION.ECS.HP.COM (15.135.173.212) by
+ UKNCSECSM027.R0018.COLLABORATION.ECS.HP.COM (15.135.173.19) with Microsoft
+ SMTP Server (TLS) id 15.0.1293.2 via Mailbox Transport; Wed, 7 Feb 2018
+ 09:32:55 +0000
+Received: from USAASECSM028.R0018.COLLABORATION.ECS.HP.COM (15.163.124.145) by
+ UKNWSECSM019.R0018.COLLABORATION.ECS.HP.COM (15.135.173.212) with Microsoft
+ SMTP Server (TLS) id 15.0.1293.2; Wed, 7 Feb 2018 09:32:55 +0000
+Received: from suwmlir1.mail.eds.com (15.163.124.8) by
+ USAASECSM028.R0018.COLLABORATION.ECS.HP.COM (15.163.124.145) with Microsoft
+ SMTP Server (TLS) id 15.0.1293.2 via Frontend Transport; Wed, 7 Feb 2018
+ 04:32:54 -0500
+Received: from suwmlir1.mail.eds.com (localhost [127.0.0.1])
+	by suwmlir1.mail.eds.com (8.14.9/8.13.8) with ESMTP id w179Wfrh011717
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <Murielle.Roschi@abbvie.com>; Wed, 7 Feb 2018 09:32:41 GMT
+Received: from suwmler1.mail.eds.com ([15.163.92.38])
+	by suwmlir1.mail.eds.com (8.14.9/8.13.8) with ESMTP id w179WfnN011711
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <Murielle.Roschi@abbvie.com>; Wed, 7 Feb 2018 09:32:41 GMT
+Received: from suwmler1.mail.eds.com (localhost [127.0.0.1])
+	by suwmler1.mail.eds.com (8.14.9/8.13.8) with ESMTP id w179WL7E028189
+	for <Murielle.Roschi@abbvie.com>; Wed, 7 Feb 2018 04:32:21 -0500
+Received: from mail6.bemta12.messagelabs.com (mail6.bemta12.messagelabs.com [216.82.250.247])
+	by suwmler1.mail.eds.com (8.14.9/8.13.8) with ESMTP id w179W3cV027235
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <Murielle.Roschi@abbvie.com>; Wed, 7 Feb 2018 04:32:21 -0500
+Received: from [216.82.251.43] (using TLSv1.2 with cipher DHE-RSA-AES256-GCM-SHA384 (256 bits))
+	by server-16.bemta-12.messagelabs.com id 07/51-03101-5A7CA7A5; Wed, 07 Feb 2018 09:32:21 +0000
+Received: (qmail 22395 invoked from network); 7 Feb 2018 09:32:20 -0000
+Received: from mail-it0-f65.google.com (HELO mail-it0-f65.google.com) (209.85.214.65)
+  by server-16.tower-196.messagelabs.com with AES128-GCM-SHA256 encrypted SMTP; 7 Feb 2018 09:32:20 -0000
+Received: by mail-it0-f65.google.com with SMTP id e1so1479651ita.0
+        for <Murielle.Roschi@abbvie.com>; Wed, 07 Feb 2018 01:32:20 -0800 (PST)
+Received: from [192.168.1.4] ([103.83.205.10])
+        by smtp.gmail.com with ESMTPSA id o201sm1727793itb.7.2018.02.07.01.32.18
+        for <Murielle.Roschi@abbvie.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 07 Feb 2018 01:32:19 -0800 (PST)
+From: Imteaj khondokar robin <aainagaur11@gmail.com>
+To: "Roschi, Murielle" <murielle.roschi@abbvie.com>
+Subject: 
+Thread-Index: AQHTn/aiQ323zbLX1k2j79HZSeWlaw==
+Date: Wed, 7 Feb 2018 09:29:48 +0000
+Message-ID: <5f55e19d-0a07-263f-a915-f183615efeb3@gmail.com>
+Content-Language: de-CH
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: USAASECSM028.R0018.COLLABORATION.ECS.HP.COM
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <0EFCA5B68342C645BB8FD351A3E0C58A@R0018.COLLABORATION.ECS.HP.COM>
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+X-Brightmail-Tracker: H4sIAAAAAAAAA11UbUxTVxjmtLflUnrGpSC8drJh44YuIo75YxqzGH+g2bJlgWRZyBJXxxUa
+	ykd6WxVnNgYDaWGIgk4LjA+HX0PBAtpAoabiB8wpijOyGKHCBIFsDKMoMN25vRe47M+b9zzP
+	Oe/Hc59cWq65q9bS7G4za0rXG3VKFaWKvGeI7u7ak7j2fE3I+3/erqY2oa1nel8pPkWJqo1J
+	rNGwkzXFfPClKqXviE2Rqdx9qH9ckY0oGwqggVkHNu81xOcaZgTB5fovBHw9nKo9KLMhmuSr
+	wFoSJ8Br4Ka3WmlDKnL9GYLRusOUcOhH8ND9hBIKDSB4XpMpEAdk0LU/X7xlk8HMk9Ny4XAV
+	Qcv3OWKxZhkUXf9LvHYRQbuzVC4U2wLThb8o5omG8hrxfSmCqnoXEg4/y2DkWq0//0RJlsp7
+	2uPLQ5n34Ni4sGAIEwCOwpsivgZulLYo+JxiVsDBI07f7JjZCAX9l5R8LmfCoSDHLRc2Xw3j
+	B8plQh4PN8fyFEIeDLXlLvFOGLxs9Sp50eREtIbWGKHMx9BXNoCEfDmUFXr9hVbB0HV0iCpB
+	kXZJN/vCa7vktV3y2i55XY0Up5Faz7Hm6J1cWnL02lgHEkyxw4n+aNvoQQyNdGq8tjErUaPQ
+	7+Sy0jwolZbpluDBmj2Jmte2ZyRlpei5lG0mi5HldKH4LTeB8Ty83WJM1Wnx19cIGjKPprO7
+	OCNrJi7UvYE/ryBc+DzHWbhMw1eGDAu3zWIyehDQclL2xSm+bJI+aw9ryhCaedDrNKULxzde
+	RiRqmGS9mU1l2UzWNMfmEimYgyP/dCMtlZ6RzuoA5/NjBJvYZHb3DoPRPHeXFHFcJAwjZXyT
+	R+Bn8WTzMCkhGX45ZhIIrZXS/59fRgfwQeVBybSabFLMz4C5TH0aZ0gW+4fgHB5Vz6G+3ktx
+	Ng9q5kBJ3wj8ZiWhwuaoxT27URuiHZMP8uX0M/sAiRPtfLR18DH/1BCPHx4m8cjsYxJ/mhkl
+	8d7IGInNx8fz5RqfXNpw3M33Z/gmKZb0ebW0YbiZ3zpIQvADa5fhb1/sStQskeALM2sjcTbP
+	LpWwi8fm/0ZB+87cuY0itCEY+fn5adTkc6YZzKJKIj+KTsqIKUPwbZ9mhnTzgpAafIgHA0XQ
+	pyNgq++zi5hExmV4HS/jEpFZPE6sB9GIiYLiJyWbYWSmMg0e2G+1ISgdPPQYwf07Y7MIGqeO
+	n5XDuarhK3IYapk8TkG9q7OJguKc3zsoaLzbUKaAromBKgU0uG3tCnBctTcoweqacinB/ahi
+	UAllPft/8AdH178/+kPRdGE9DbmlY04aTvza6KKh/YwnNwCcHU3WABi7NXgxAC45ey6ooKDa
+	5lLB5Uctgyqos81eDwTvVNNwIOwrnZkMhKIe96tAOFZw0q0eJaaTEdPd412MObPeLDXdqkqf
+	6URUNJ2u0mc6EVxkupWC6URqsVzabBT1tKrP4o31fmLa+3dR4frmLBcz/VvyYE5Nb2tebtTW
+	TVeiJ8/1xiTkdU6d7Q+nE853VvpNnFg9+7bFeKHvo7HO79pWGY3j1uFZbdKHw/e3HI6zbggL
+	7w+qGKi+G7+5roBZ2dzU+417xKzYFlOhNz4vdIfGPSxfc2MFVu/9bIPVFlGvo7gU/bvvyE2c
+	/j84gLRF6QYAAA==
+
+DQo=

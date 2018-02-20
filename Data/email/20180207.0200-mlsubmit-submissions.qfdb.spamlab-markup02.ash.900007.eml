@@ -1,0 +1,89 @@
+From /ase/bizdata/maildir_aset/asettest/output_directories/except_spools/new/1517997694.22135_2.aset-vmailhost-02.ussfqa.qalabs.symantec.com
+Return-Path: <bizint@brightmail.com>
+X-Original-To: /ase/bizdata/image_spooldirs/automation_eml_queue/20180207.0200-mlsubmit-submissions.qfdb.spamlab-markup02.ash.900007.eml.prod_F2SMG@except.brightmail.com
+Delivered-To: asettest@asettest.brightmail.com
+Received: from aset-vsmg-01 (aset-vsmg-01.ussfqa.qalabs.symantec.com [10.32.216.107])
+	by asettest.brightmail.com (Postfix) with ESMTP id 7888215F003
+	for </ase/bizdata/image_spooldirs/automation_eml_queue/20180207.0200-mlsubmit-submissions.qfdb.spamlab-markup02.ash.900007.eml.prod_F2SMG@except.brightmail.com>; Wed,  7 Feb 2018 02:01:34 -0800 (PST)
+X-AuditID: 0a20d86b-0c7ff70000000df6-48-5a7ace7ed120
+Received: from aset-prod-10.ussfqa.qalabs.symantec.com (aset-prod-10.ussfqa.qalabs.symantec.com [10.32.216.116])
+	by aset-vsmg-01 (Symantec Messaging Gateway) with SMTP id 2E.C7.03574.E7ECA7A5; Wed,  7 Feb 2018 02:01:34 -0800 (PST)
+X-Mailbox-Line: From mailadm@mail.eds.com:junk_parsed_msg
+X-BMI-ASM-Submitter: mailadm@mail.eds.com
+X-BMI-ASM-Receiver: spamsample@messagelabs.com
+Received: from UKNCSECSM023.R0018.COLLABORATION.ECS.HP.COM (15.135.135.208) by
+ UKNCSECSM011.R0018.COLLABORATION.ECS.HP.COM (15.135.135.220) with Microsoft
+ SMTP Server (TLS) id 15.0.1293.2 via Mailbox Transport; Wed, 7 Feb 2018
+ 09:52:34 +0000
+Received: from USAASECSM048.R0018.COLLABORATION.ECS.HP.COM (15.163.124.161) by
+ UKNCSECSM023.R0018.COLLABORATION.ECS.HP.COM (15.135.135.208) with Microsoft
+ SMTP Server (TLS) id 15.0.1293.2; Wed, 7 Feb 2018 09:52:33 +0000
+Received: from alpmlir1.mail.eds.com (15.163.124.148) by
+ USAASECSM048.R0018.COLLABORATION.ECS.HP.COM (15.163.124.161) with Microsoft
+ SMTP Server (TLS) id 15.0.1293.2 via Frontend Transport; Wed, 7 Feb 2018
+ 04:52:33 -0500
+Received: from alpmlir1.mail.eds.com (localhost [127.0.0.1])
+	by alpmlir1.mail.eds.com (8.14.9/8.13.8) with ESMTP id w179qQ8T011974
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <David.Recio@abbvie.com>; Wed, 7 Feb 2018 09:52:26 GMT
+Received: from suwmler1.mail.eds.com ([15.163.92.38])
+	by alpmlir1.mail.eds.com (8.14.9/8.13.8) with ESMTP id w179qQ5q011971
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <David.Recio@abbvie.com>; Wed, 7 Feb 2018 09:52:26 GMT
+Received: from suwmler1.mail.eds.com (localhost [127.0.0.1])
+	by suwmler1.mail.eds.com (8.14.9/8.13.8) with ESMTP id w179q9cL033567
+	for <David.Recio@abbvie.com>; Wed, 7 Feb 2018 04:52:09 -0500
+Received: from mail6.bemta8.messagelabs.com (mail6.bemta8.messagelabs.com [216.82.243.55])
+	by suwmler1.mail.eds.com (8.14.9/8.13.8) with ESMTP id w179q37K033138
+	(version=TLSv1/SSLv3 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK)
+	for <David.Recio@abbvie.com>; Wed, 7 Feb 2018 04:52:09 -0500
+Received: from [216.82.242.44] (using TLSv1.2 with cipher DHE-RSA-AES256-GCM-SHA384 (256 bits))
+	by server-9.bemta-8.messagelabs.com id 2D/CB-03425-94CCA7A5; Wed, 07 Feb 2018 09:52:09 +0000
+Received: (qmail 52610 invoked from network); 7 Feb 2018 09:52:08 -0000
+Received: from mail-ot0-f193.google.com (HELO mail-ot0-f193.google.com) (74.125.82.193)
+  by server-11.tower-197.messagelabs.com with AES128-GCM-SHA256 encrypted SMTP; 7 Feb 2018 09:52:08 -0000
+Received: by mail-ot0-f193.google.com with SMTP id q9so255825oti.0
+        for <David.Recio@abbvie.com>; Wed, 07 Feb 2018 01:52:08 -0800 (PST)
+Received: from [192.168.1.4] ([103.83.205.10])
+        by smtp.gmail.com with ESMTPSA id y52sm334347otd.3.2018.02.07.01.52.03
+        for <David.Recio@abbvie.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 07 Feb 2018 01:52:07 -0800 (PST)
+From: Imteaj khondokar robin <aainagaur11@gmail.com>
+To: "Recio, David" <david.recio@abbvie.com>
+Subject: 
+Thread-Index: AQHTn/lgjv7eKAUCdUu9Xzzaj8dhiw==
+Date: Wed, 7 Feb 2018 09:29:52 +0000
+Message-ID: <a126b546-d644-da81-ced1-08080a28635f@gmail.com>
+Content-Language: en-GB
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Organization-AuthSource: USAASECSM048.R0018.COLLABORATION.ECS.HP.COM
+X-MS-Has-Attach: 
+X-MS-Exchange-Organization-SCL: 0
+X-MS-TNEF-Correlator: 
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <D3E851174E5D3D4A98703C8C9D6D5E59@R0018.COLLABORATION.ECS.HP.COM>
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+X-Brightmail-Tracker: H4sIAAAAAAAAA11Ua0wcVRTmzj4Y1r1lmC1wuxaEjUZLS5dGNGooEhNpo6k21R9m/9ApjLsb
+	lmWzM8ujsS22drHbVIFgWZaHlBoT1Ea6pdpWpLI+6CJIY9WglsL2JS8TaHhoiuidBzDrn5Nz
+	v+/c8537ncmQKnpKZyTZCp51OxmHSatT69KG+cyDP+y3ZN3yrXvquwYvyAM7z1z7V7MbWHQ5
+	RazDXsa6zbl7dbZf/T6NS1vx3ui0pgqofSCORFQ2au5bBj6gI2lqHKC/+j7QSMTTqKO9jvAB
+	Eueb0LGafAneioYibVqpfhGgny/+qZEOowB9NnhfPtwEqNE/K7c9QaDrdwZU0sFLoN7OoFo6
+	fA3QyOXr8p0zBKrrfUc+9OAGd5u1giZN7UDd82+ppDwEkP+ffKnoXYB+6x+Th2kl0J1wOFao
+	0uJXHZ2/Kubrqc1oYvQaEHIDFYeCx4dkfCua+byVEHI19TA61/OV+HBI5aC5kWNijYpKRofn
+	OmRDtqDp2iZCyvegi7MNsVKegNqbulVSno4G74VlZ5PQ8qWIVjBQhQ389JJZarkLBc8eVUt5
+	Oqo/HomtAekBhVpg7UZAcSOguBEQB01A4cbb6jag+QjoGY7lM8u4Emtm1rYgkL6K4gtg7Iuc
+	EKBIYNLDrM5KC61hyrjKkhAoJglTIrx1ar+FXrevtKjSxnC2ArfHwXKm9fCRyxiGq/A+j6PY
+	ZITmQYwaVlEnW845WB5/hqZU+Foz5pJXOc7DueyF9lIPV+BxO0LgQVJtSobfLuS+SlNWhmeL
+	WdbFuiW9EDiC30vVjc/2A6PaWepkTQg2CFoJbtbKVrxud/ArtbhJ5HvMUEpGHC8FLuzBz0tS
+	EooJ0yH1CqaNSvr/QxJkXAhYST024IIgDzkXU8LZrbK0AR6+glH9CirKboCPCqX0CqiQTIEP
+	tWAqaYWKlusH5wEZvHfDqyJnvhzD0dcjRG/HbRznTv6Bo39pAsfW+5M4Do9P4dj14bRXRYse
+	GZPhC4IyJbS3eZyrFhmTYJfw1HgFIYxq3AgP/V1uoRMV+Nq0xjRYJbAbFGz0wMKPJr66+uqP
+	IMVogCAmJobW4x2W2HnZH5mfBIX4azPAPmE6vd3JrzlIwzwBfEAGRQMRfFZctYwp/NsIswX/
+	EmUmeppJvCgCL2pYWDrkeIZXLmpTi7goGZUXZWoRFyWDUYt6TFqUTEUrGatA7szSE+EF5v2C
+	t9ubbItDP7155CXidP1yXePeDG5nzYkDs/F5RcEXu6ZOtm45fbeUPljPuAefrz33TVdqY9b0
+	M7kDqQMvm8urzmbc2N2ZX239uCXjlwNLk9mb5+d+355NqkZrD/EhW4yr3977+OInb7QVVpi3
+	d0/cHH/uyciV8zva0/wjJjVnY7ZlqNwc8x+FNaru/gUAAA==
+
+DQo=
