@@ -112,11 +112,11 @@ def message_generator(message=None):
     return cluster_peers
 
 
-def main():
+def main(susp_emails=None):
     # instantiate a server
     port = 5000
     global client
-    client = btf.FilerPeer(10, port)
+    client = btf.FilerPeer(10, port, susp_emails)
     client.debug = True
 
     t1 = threading.Thread(target=setup_server, args=(client, ))
