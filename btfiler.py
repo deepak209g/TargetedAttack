@@ -3,6 +3,9 @@
 from btpeer import *
 import os
 import uuid
+import json
+from random import randint
+import threading
 
 PEERNAME = "NAME"  # request a peer's canonical id
 LISTPEERS = "LIST"
@@ -18,7 +21,8 @@ SAVEDATA = "SAVE"
 REPLY = "REPL"
 ERROR = "ERRO"
 
-
+lock = threading.Lock()
+cluster_peers = list()
 # Assumption in this program:
 #   peer id's in this application are just "host:port" strings
 
@@ -256,7 +260,33 @@ class FilerPeer(BTPeer):
         """
         self.__debug("got the file data")
         self.__debug(data)
-        peerconn.senddata(REPLY, data)
+        msg_json = json.loads(data)
+        self.__debug(msg_json)
+
+        cluster_peers = []
+        if self.myid not in msg_json[unicode("peerid_list")] and int(msg_json[unicode("hops")]) < 3:
+            similarity = self.similarity_check()
+            if similarity >= 0.7:
+                msg_json[unicode("cluster")].append(self.myid)
+                cluster_peers.append(self.myid)
+            self.__debug("similarity: {}".format(similarity))
+            self.__debug("Propagating the data")
+            msg_json[unicode("peerid_list")].append(self.myid)
+
+            threads = list()
+            for peerid in self.getpeerids():
+                if peerid not in msg_json[peerid_list]:
+                    msg_json[unicode("hops")] += 1
+                    threads.append(threading.Thread(target=self.send_message, args=(peerid, msg_json, )))
+                    threads[-1].start()
+                    # self.sendtopeer(peerid, msgtype="FPUT", msgdata=json.dumps(msg_json))
+                    self.__debug("send data to {}".format(peerid))
+            for thread in threads:
+                thread.join()
+        return_json = {
+            "cluster": cluster_peers
+        }
+        peerconn.senddata(REPLY, json.dumps(return_json))
 
 
     # --------------------------------------------------------------------------
@@ -340,3 +370,16 @@ class FilerPeer(BTPeer):
         self.__debug(filepath)
         self.files[filename] = open(filepath, 'r').read()
         self.__debug("Added local file %s" % filename)
+
+    def similarity_check(self):
+        return float(randint(70, 100))/100
+
+    def send_message(self, peerid, msg_json):
+        one_reply = self.sendtopeer(peerid, msgtype="FPUT", msgdata=json.dumps(msg_json))
+        msg_data = one_reply[0][1]
+        tmp_cluster = json.loads(msg_data)[unicode("cluster")]
+        with lock:
+            for peerid in tmp_cluster:
+                if peerid not in cluster_peers:
+                    cluster_peers.append(peerid)
+                    
