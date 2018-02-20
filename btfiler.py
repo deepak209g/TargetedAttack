@@ -275,7 +275,7 @@ class FilerPeer(BTPeer):
 
             threads = list()
             for peerid in self.getpeerids():
-                if peerid not in msg_json[peerid_list]:
+                if peerid not in msg_json[unicode('peerid_list')]:
                     msg_json[unicode("hops")] += 1
                     threads.append(threading.Thread(target=self.send_message, args=(peerid, msg_json, )))
                     threads[-1].start()
