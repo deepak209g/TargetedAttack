@@ -1,6 +1,6 @@
 from __future__ import division
 import re
-import gensim.similarities.docsim as sim
+# import gensim.similarities.docsim as sim
 
 def words(text):
     return re.findall('\w+', text)

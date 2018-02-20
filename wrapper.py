@@ -1,19 +1,20 @@
 import email_data
 from lib import ThreadedTimer as tt
 import filters
-import pythoncom
+# import pythoncom
 import client
 import Tkinter
 import tkMessageBox
 import threading
 import time
+import ctypes
 susp_emails = {}
 
 PEER_THRESH = 1
 
 def showwarning():
-    tkMessageBox()
-    tkMessageBox.showwarning("Attention", "Your organization is possibly under a targeted attack")
+    MessageBox = ctypes.windll.user32.MessageBoxW
+    MessageBox(None, u'Malicious', u'Warning', 0)
 
 
 def main(timer=10):
