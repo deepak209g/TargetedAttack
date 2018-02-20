@@ -9,7 +9,7 @@ SPAM = 1
 
 mydomain = 'symantec.com'
 def filter_mail_from(meta):
-    if meta['Sender'] == mydomain:
+    if mydomain in meta['Sender']:
         return CLEAN
     else:
         return SPAM
@@ -36,7 +36,7 @@ def filter_email(meta):
     returns = []
     returns.append(filter_mail_from(meta))
     returns.append(filter_mail_blacklist(meta))
-    returns.append(filter_mail_whitelist(meta))
+    # returns.append(filter_mail_whitelist(meta))
     if SPAM in returns:
         return SPAM
     else:
