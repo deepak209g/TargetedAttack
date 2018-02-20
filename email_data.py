@@ -6,10 +6,7 @@ from flanker.addresslib import address
 import email.utils
 import time
 import win32com.client, mailbox, email.utils
-import pythoncom
 
-
-pythoncom.CoInitialize()
 def json_serial(obj):
     if isinstance(obj, datetime.datetime):
         serial = obj.isoformat()
