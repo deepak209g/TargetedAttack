@@ -35,7 +35,7 @@ class FilerPeer(BTPeer):
     """
 
     # --------------------------------------------------------------------------
-    def __init__(self, maxpeers, serverport):
+    def __init__(self, maxpeers, serverport, susp_emails=None):
         # --------------------------------------------------------------------------
         """ Initializes the peer to support connections up to maxpeers number
         of peers, with its server listening on the specified port. Also sets
@@ -46,7 +46,7 @@ class FilerPeer(BTPeer):
         BTPeer.__init__(self, maxpeers, serverport)
 
         self.files = {}  # available files: name --> peerid mapping
-
+        
         self.addrouter(self.__router)
 
         handlers = {LISTPEERS: self.__handle_listpeers,
