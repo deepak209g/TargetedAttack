@@ -8,7 +8,7 @@ import requests
 import traceback
 
 
-central_server = 'http://172.31.111.1:5000'
+central_server = 'http://192.168.1.5:5000'
 cluster_peers = list()
 lock = threading.Lock()
 port = 5000
@@ -58,7 +58,7 @@ def refresh_peers_list(client, port):
 
 def send_message(client, peerid, msg_json):
     one_reply = client.sendtopeer(peerid=peerid, msgtype="FPUT", msgdata=json.dumps(msg_json))
-    # print (one_reply)
+    print one_reply
     msg_data = one_reply[0][1]
     tmp_cluster = json.loads(msg_data)[unicode("cluster")]
     with lock:
@@ -86,7 +86,7 @@ def message_generator(message=None):
             'hops': 0,
             'cluster': [client.myid]
         }
-        client.addpeer(peerid="192.168.1.6:5002", host="192.168.1.6", port=5002)
+        # client.addpeer(peerid="192.168.1.6:5002", host="192.168.1.6", port=5002)
         print (json.dumps(msg_json))
 
         if len(client.getpeerids()) <= 1:
@@ -109,6 +109,8 @@ def message_generator(message=None):
         if client.debug == True:
             traceback.print_exc()
 
+    return cluster_peers
+
 
 def main():
     # instantiate a server
@@ -125,7 +127,7 @@ def main():
     # get_peers()
     # stop = False
     # while stop is False:
-    message_generator("Spam")
 
 if __name__ == "__main__":
     main()
+    print 'from bll' + str(message_generator("Spam from Deepak again"))
