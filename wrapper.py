@@ -6,7 +6,7 @@ import client
 import Tkinter
 import tkMessageBox
 import threading
-
+import time
 susp_emails = {}
 
 PEER_THRESH = 1
@@ -16,8 +16,7 @@ def showwarning():
     tkMessageBox.showwarning("Attention", "Your organization is possibly under a targeted attack")
 
 
-def main():
-    pythoncom.CoInitialize()
+def main(timer=10):
     print 'main'
     mails = email_data.fetch_outlook_data()
     spammy_mails = filters.filter_list(mails)
@@ -40,9 +39,11 @@ def main():
             t.start()
             t.join()
 
+    time.sleep(timer)
 
 
 
 if __name__ == '__main__':
-    client.main()
-    rt = tt.RepeatedTimer(5, main)
+    client.main(susp_emails)
+    # rt = tt.RepeatedTimer(5, main)
+    main()

@@ -6,6 +6,7 @@ import uuid
 import json
 from random import randint
 import threading
+import similarity
 
 PEERNAME = "NAME"  # request a peer's canonical id
 LISTPEERS = "LIST"
@@ -35,7 +36,7 @@ class FilerPeer(BTPeer):
     """
 
     # --------------------------------------------------------------------------
-    def __init__(self, maxpeers, serverport):
+    def __init__(self, maxpeers, serverport, susp_emails=None):
         # --------------------------------------------------------------------------
         """ Initializes the peer to support connections up to maxpeers number
         of peers, with its server listening on the specified port. Also sets
@@ -46,7 +47,7 @@ class FilerPeer(BTPeer):
         BTPeer.__init__(self, maxpeers, serverport)
 
         self.files = {}  # available files: name --> peerid mapping
-
+        self.susp_emails = susp_emails
         self.addrouter(self.__router)
 
         handlers = {LISTPEERS: self.__handle_listpeers,
@@ -265,7 +266,7 @@ class FilerPeer(BTPeer):
 
         cluster_peers = []
         if self.myid not in msg_json[unicode("peerid_list")] and int(msg_json[unicode("hops")]) < 3:
-            similarity = self.similarity_check()
+            similarity = self.similarity_check(msg_json[unicode('msg_data')])
             if similarity >= 0.7:
                 msg_json[unicode("cluster")].append(self.myid)
                 cluster_peers.append(self.myid)
@@ -275,7 +276,7 @@ class FilerPeer(BTPeer):
 
             threads = list()
             for peerid in self.getpeerids():
-                if peerid not in msg_json[peerid_list]:
+                if peerid not in msg_json[unicode('peerid_list')]:
                     msg_json[unicode("hops")] += 1
                     threads.append(threading.Thread(target=self.send_message, args=(peerid, msg_json, )))
                     threads[-1].start()
@@ -371,8 +372,15 @@ class FilerPeer(BTPeer):
         self.files[filename] = open(filepath, 'r').read()
         self.__debug("Added local file %s" % filename)
 
-    def similarity_check(self):
-        return float(randint(70, 100))/100
+    def similarity_check(self, query_msg):
+        sims = []
+        for key in self.susp_emails:
+            mail = self.susp_emails[key]
+            sim = similarity.jaccards_similarity(mail['Body'], query_msg)
+            sims.append(sim)
+
+        return max(sims)
+        # return float(randint(70, 100))/100
 
     def send_message(self, peerid, msg_json):
         one_reply = self.sendtopeer(peerid, msgtype="FPUT", msgdata=json.dumps(msg_json))
