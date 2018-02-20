@@ -11,6 +11,7 @@ import traceback
 central_server = 'http://172.31.111.1:5000'
 cluster_peers = list()
 lock = threading.Lock()
+port = 5000
 #
 # def get_peers():
 #     host = ''  # Bind to all interfaces
@@ -53,7 +54,7 @@ def refresh_peers_list(client, port):
             client.addpeer(peerid=peerid, host=str(ip), port=port)
 
     client.removepeer(central_server.split('/')[-1])
-
+    
 
 def send_message(client, peerid, msg_json):
     one_reply = client.sendtopeer(peerid=peerid, msgtype="FPUT", msgdata=json.dumps(msg_json))
@@ -66,9 +67,53 @@ def send_message(client, peerid, msg_json):
                 cluster_peers.append(peerid)
                 print(cluster_peers)
 
+def message_generator(message=None):
+    try:
+        # print("Give file_path or Enter 'stop' to shutdown the process")
+        global client
+
+        if not message:
+            filepath = raw_input()
+            # if filepath == 'stop':
+            #     break
+
+            client.addlocalfile(filepath)
+            message = client.files[filepath]
+        # client.addlocalfile(os.path.join('client1', '1.txt'))
+        msg_json = {
+            'msg_data': message,
+            'peerid_list': [client.myid],
+            'hops': 0,
+            'cluster': [client.myid]
+        }
+        client.addpeer(peerid="192.168.1.6:5002", host="192.168.1.6", port=5002)
+        print (json.dumps(msg_json))
+
+        if len(client.getpeerids()) <= 1:
+            refresh_peers_list(client, port)
+
+        global cluster_peers
+        cluster_peers = []
+        threads = list()
+        for peerid in client.getpeerids():
+            # client.sendtopeer(peerid=peerid, msgtype="FPUT", msgdata=json.dumps(msg_json))
+            threads.append(threading.Thread(target=send_message, args=(client, peerid, msg_json,)))
+            threads[-1].start()
+            print ("send data to {}".format(peerid))
+            # client.connectandsend(host=peerid.split(':')[0], port=peerid.split(':')[1], msgtype='FPUT',
+            #                   msgdata=json.dumps(msg_json), pid=client.myid, waitreply=True)
+        for thread in threads:
+            thread.join()
+        print("number of similar messages {0}".format(len(cluster_peers)))
+    except Exception as exp:
+        if client.debug == True:
+            traceback.print_exc()
+
+
 def main():
     # instantiate a server
     port = 5000
+    global client
     client = btf.FilerPeer(10, port)
     client.debug = True
 
@@ -78,47 +123,9 @@ def main():
     refresh_peers_list(client, port)
 
     # get_peers()
-    stop = False
-    while stop is False:
-        try:
-            print("Give file_path or Enter 'stop' to shutdown the process")
-            filepath = raw_input()
-            if filepath == 'stop':
-                break
-
-            client.addlocalfile(filepath)
-            # client.addlocalfile(os.path.join('client1', '1.txt'))
-            msg_json = {
-                'msg_data': client.files[filepath],
-                'peerid_list': [client.myid],
-                'hops': 0,
-                'cluster': [client.myid]
-                }
-            client.addpeer(peerid="192.168.1.6:5002", host="192.168.1.6", port=5002)
-            print (json.dumps(msg_json))
-
-            if len(client.getpeerids()) <= 1:
-                refresh_peers_list(client, port)
-
-            global cluster_peers
-            cluster_peers = []
-            threads = list()
-            for peerid in client.getpeerids():
-                # client.sendtopeer(peerid=peerid, msgtype="FPUT", msgdata=json.dumps(msg_json))
-                threads.append(threading.Thread(target=send_message, args=(client, peerid, msg_json, )))
-                threads[-1].start()
-                print ("send data to {}".format(peerid))
-                # client.connectandsend(host=peerid.split(':')[0], port=peerid.split(':')[1], msgtype='FPUT',
-                #                   msgdata=json.dumps(msg_json), pid=client.myid, waitreply=True)
-            for thread in threads:
-                thread.join()
-            print("number of similar messages {0}".format(len(cluster_peers)))
-        except KeyboardInterrupt:
-            stop = True
-        except Exception as exp:
-            if client.debug == True:
-                traceback.print_exc()
-
+    # stop = False
+    # while stop is False:
+    message_generator("Spam")
 
 if __name__ == "__main__":
     main()
