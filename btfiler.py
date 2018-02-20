@@ -382,3 +382,4 @@ class FilerPeer(BTPeer):
             for peerid in tmp_cluster:
                 if peerid not in cluster_peers:
                     cluster_peers.append(peerid)
+                    
