@@ -7,6 +7,7 @@ import json
 from random import randint
 import threading
 import similarity
+import ctypes
 
 PEERNAME = "NAME"  # request a peer's canonical id
 LISTPEERS = "LIST"
@@ -16,6 +17,7 @@ QRESPONSE = "RESP"
 FILEGET = "FGET"
 FILEPUT = "FPUT"
 PEERQUIT = "QUIT"
+WARNING = "WARN"
 
 SAVEDATA = "SAVE"
 
@@ -58,7 +60,8 @@ class FilerPeer(BTPeer):
                     FILEGET: self.__handle_fileget,
                     FILEPUT: self.__handle_fileput,
                     PEERQUIT: self.__handle_quit,
-                    SAVEDATA: self.__handle_save
+                    SAVEDATA: self.__handle_save,
+                    WARNING: self.__handle_warn
                     }
         for mt in handlers:
             self.addhandler(mt, handlers[mt])
@@ -79,6 +82,14 @@ class FilerPeer(BTPeer):
             rt = [peerid]
             rt.extend(self.peers[peerid])
             return rt
+
+    def __handle_warn(self, peerid=None, data=None):
+        # --------------------------------------------------------------------------
+        """ Handles the LISTPEERS message type. Message data is not used. """
+        try:
+            self.show_warning()
+        except:
+            self.__debug("Error in showing warning")
 
     # --------------------------------------------------------------------------
     def __handle_save(self, peerid=None, data=None):
@@ -264,6 +275,7 @@ class FilerPeer(BTPeer):
         msg_json = json.loads(data)
         self.__debug(msg_json)
 
+        global cluster_peers
         cluster_peers = []
         if self.myid not in msg_json[unicode("peerid_list")] and int(msg_json[unicode("hops")]) < 3:
             similarity = self.similarity_check(msg_json[unicode('msg_data')])
@@ -378,7 +390,7 @@ class FilerPeer(BTPeer):
             mail = self.susp_emails[key]
             sim = similarity.jaccards_similarity(mail['Body'], query_msg)
             sims.append(sim)
-
+        # return 0.9
         return max(sims)
         # return float(randint(70, 100))/100
 
@@ -390,4 +402,7 @@ class FilerPeer(BTPeer):
             for peerid in tmp_cluster:
                 if peerid not in cluster_peers:
                     cluster_peers.append(peerid)
-                    
+
+    def show_warning(self):
+        MessageBox = ctypes.windll.user32.MessageBoxW
+        MessageBox(None, u'Malicious', u'Warning', 0)

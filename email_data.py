@@ -1,8 +1,8 @@
 import os
 import File_Utils as fu
 import datetime
-from flanker import mime
-from flanker.addresslib import address
+# from flanker import mime
+# from flanker.addresslib import address
 import email.utils
 import time
 import win32com.client, mailbox, email.utils

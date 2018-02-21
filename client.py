@@ -8,7 +8,7 @@ import requests
 import traceback
 
 
-central_server = 'http://192.168.1.5:5000'
+central_server = 'http://192.168.1.5:5001'
 cluster_peers = list()
 lock = threading.Lock()
 port = 5000
@@ -53,7 +53,7 @@ def refresh_peers_list(client, port):
         if peerid not in client.getpeerids():
             client.addpeer(peerid=peerid, host=str(ip), port=port)
 
-    client.removepeer(central_server.split('/')[-1])
+    # client.removepeer(central_server.split('/')[-1])
     
 
 def send_message(client, peerid, msg_json):
@@ -105,6 +105,10 @@ def message_generator(message=None):
         for thread in threads:
             thread.join()
         print("number of similar messages {0}".format(len(cluster_peers)))
+
+        for peerid in cluster_peers:
+            client.sendtopeer(peerid=peerid, msgtype="WARN", msgdata="malicious_mail_warning")
+
     except Exception as exp:
         if client.debug == True:
             traceback.print_exc()
